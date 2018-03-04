@@ -1,0 +1,83 @@
+`timescale 1ns/1ns
+module cpu(
+            input clk,
+            input rst,
+            output rd,
+            output wr,
+            output halt,
+            output fetch,
+            output [2:0] opcode,
+            output[12:0] addr,
+            output[12:0] ir_addr,
+            output[12:0] pc_addr,
+            inout[7:0] data);
+
+wire[7:0] alu_out, accum;
+wire zero, inc_pc, load_acc, load_pc, load_ir, data_ena, contr_ena, addr_sel;
+
+clk_gen m_clk_gen(.clk(clk),
+                  .rst(rst),
+                  .fetch(fetch)
+                  );
+
+register m_register(.clk(clk), 
+                    .ena(load_ir), 
+                    .rst(rst), 
+                    .data(data), 
+                    .opc_iraddr({opcode,ir_addr})
+                    );
+
+accum m_accum(.clk(clk), 
+              .ena(load_acc), 
+              .rst(rst), 
+              .data(alu_out), 
+              .accum(accum)
+              );
+
+alu m_alu(.clk, 
+          .alu_ena(alu_ena), 
+          .opcode(opcode), 
+          .data(data), 
+          .accum(accum),
+          .alu_out(alu_out),
+          .zero(zero)
+          );
+
+machinectl m_machinectl(.clk(clk),
+                        .fetch(fetch),
+                        .rst(rst),
+                        .ena(contr_ena)
+                        );
+
+machine m_machine(.clk(clk),
+                  .zero(zero),
+                  .ena(contr_ena),
+                  .opcode(opcode),
+                  .inc_pc(inc_pc),
+                  .load_acc(load_acc),
+                  .load_pc(load_pc),
+                  .rd(rd),
+                  .wr(wr),
+                  .load_ir(load_ir),
+                  .datactl_ena(data_ena),
+                  .halt(halt),
+                  .alu_ena(alu_ena),
+                  .add_sel(addr_sel)
+                  );
+
+datactl m_datactl(.data_ena(data_ena),
+                  .in(alu_out),
+                  .data(data));
+            
+adr m_adr(.fetch(fetch),
+          .ir_addr(ir_addr),
+          .pc_addr(pc_addr),
+          .addr(addr));
+          
+counter m_counter(.clk(inc_pc),
+                  .rst(rst),
+                  .ir_addr(ir_addr),
+                  .load(load_pc),
+                  .pc_addr(pc_addr));
+
+endmodule

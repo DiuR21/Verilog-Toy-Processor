@@ -1,0 +1,92 @@
+C:/modeltech64_10.1c/examples/alu.v {1 {vlog -work work -vopt C:/modeltech64_10.1c/examples/alu.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module alu
+
+Top level modules:
+	alu
+
+} {} {}} C:/modeltech64_10.1c/examples/cputop.v {1 {vlog -work work -vopt {C:\modeltech64_10.1c\examples\cputop.v}
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module cpu_top
+
+Top level modules:
+	cpu_top
+
+} {} {}} C:/modeltech64_10.1c/examples/clk_gen.v {1 {vlog -work work -vopt {C:\modeltech64_10.1c\examples\clk_gen.v}
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module clk_gen
+
+Top level modules:
+	clk_gen
+
+} {} {}} C:/modeltech64_10.1c/examples/addr_decode.v {1 {vlog -work work -vopt C:/modeltech64_10.1c/examples/addr_decode.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module addr_decode
+
+Top level modules:
+	addr_decode
+
+} {} {}} C:/modeltech64_10.1c/examples/rom.v {1 {vlog -work work -vopt C:/modeltech64_10.1c/examples/rom.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module rom
+
+Top level modules:
+	rom
+
+} {} {}} C:/modeltech64_10.1c/examples/adr.v {1 {vlog -work work -vopt C:/modeltech64_10.1c/examples/adr.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module adr
+
+Top level modules:
+	adr
+
+} {} {}} C:/modeltech64_10.1c/examples/cpu.v {1 {vlog -work work -vopt {C:\modeltech64_10.1c\examples\cpu.v}
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module cpu
+
+Top level modules:
+	cpu
+
+} {} {}} C:/modeltech64_10.1c/examples/machinectl.v {1 {vlog -work work -vopt {C:\modeltech64_10.1c\examples\machinectl.v}
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module machinectl
+
+Top level modules:
+	machinectl
+
+} {} {}} C:/modeltech64_10.1c/examples/ram.v {1 {vlog -work work -vopt C:/modeltech64_10.1c/examples/ram.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module ram
+
+Top level modules:
+	ram
+
+} {} {}} C:/modeltech64_10.1c/examples/accum.v {1 {vlog -work work -vopt C:/modeltech64_10.1c/examples/accum.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module accum
+
+Top level modules:
+	accum
+
+} {} {}} C:/modeltech64_10.1c/examples/datactl.v {1 {vlog -work work -vopt C:/modeltech64_10.1c/examples/datactl.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module datactl
+
+Top level modules:
+	datactl
+
+} {} {}} C:/modeltech64_10.1c/examples/register.v {1 {vlog -work work -vopt C:/modeltech64_10.1c/examples/register.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module register
+
+Top level modules:
+	register
+
+} {} {}} C:/modeltech64_10.1c/examples/counter.v {1 {vlog -work work -vopt C:/modeltech64_10.1c/examples/counter.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module counter
+
+Top level modules:
+	counter
+
+} {} {}}

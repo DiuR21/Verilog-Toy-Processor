@@ -1,0 +1,8 @@
+module rom( input rd,
+            input ena,
+            inout[12:0] addr,
+            output[7:0] data);
+
+  assign data = ( rd && ena )? memory[addr] : 8'hzz;
+  
+endmodule          
